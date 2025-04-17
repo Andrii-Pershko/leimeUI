@@ -1,11 +1,12 @@
-import { heroui } from "@heroui/react";
+// tailwind.config.js
+const { heroui } = require("@heroui/theme");
 
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./index.html", // якщо ти його використовуєш
+    "./src/**/*.{js,ts,jsx,tsx}", // всі твої компоненти
+    "./node_modules/@heroui/theme/dist/components/**/*.js", // всі HeroUI компоненти
   ],
   theme: {
     extend: {},

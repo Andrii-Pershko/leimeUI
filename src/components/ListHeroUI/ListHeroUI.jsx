@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 const ListHeroUI = () => {
   const [memes, setMemems] = useState([]);
 
-  console.log("Example", memes);
-
   useEffect(() => {
     setMemems(fakeDB);
   }, [memes]);

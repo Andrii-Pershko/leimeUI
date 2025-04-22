@@ -23,17 +23,25 @@ const TableHeroUI = () => {
       const results = {};
 
       await Promise.all(
-        data.map(async (meme) => {
-          try {
-            const response = await fetch(meme.link, { method: "HEAD" });
-            results[meme.id] = response.ok;
-          } catch (error) {
-            results[meme.id] = false;
-          }
+        data.map((meme) => {
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.src = meme.link;
+
+            img.onload = () => {
+              results[meme.id] = true;
+              resolve();
+            };
+            img.onerror = () => {
+              results[meme.id] = false;
+              resolve();
+            };
+          });
         })
       );
-      setLoading(true);
+
       setValidLinks(results);
+      setLoading(true);
     };
 
     checkLinks();

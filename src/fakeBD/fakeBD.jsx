@@ -8,7 +8,7 @@ export let fakeDB = [
   {
     id: 2,
     discribe: "Бо актуально",
-    link: "https://rivnepost.rv.ua/img/650/internetmemi-yak-zhanr-zhurnalistiki_20250122_8459.jpg",
+    link: "https://rivne",
     likes: 10,
   },
   {
@@ -56,7 +56,7 @@ export let fakeDB = [
   {
     id: 10,
     discribe: "Коли немає вихідних на пасху",
-    link: "https://kp.ua/img/article/7036/79_tn2-v1736510709.webp",
+    link: "https://kp.u",
     likes: 76,
   },
 ];

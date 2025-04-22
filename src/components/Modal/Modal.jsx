@@ -36,8 +36,12 @@ export default function ModalUsage({ id, discription, link, setData }) {
 
   return (
     <>
-      <Button onPress={onOpen}>Open Modal</Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Button onPress={onOpen}>Edit</Button>
+      <Modal
+        isOpen={isOpen}
+        placement="center-center"
+        onOpenChange={onOpenChange}
+      >
         <ModalContent>
           {(onClose) => (
             <>

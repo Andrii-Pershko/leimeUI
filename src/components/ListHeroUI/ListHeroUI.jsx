@@ -13,7 +13,7 @@ const ListHeroUI = () => {
     <div className="mt-10 gap-2 grid grid-cols-2 sm:grid-cols-4">
       {memes.map((meme) => (
         /* eslint-disable no-console */
-        <Card className="py-4">
+        <Card key={meme.id} className="py-4">
           <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
             <p className="flex items-center text-tiny uppercase font-bold">
               {meme.likes} <HeartIcon />
